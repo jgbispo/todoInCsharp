@@ -1,6 +1,6 @@
 namespace src
 {
-  class ToDo
+  public class ToDo
   {
     // properties
     private List<Item> toDo;

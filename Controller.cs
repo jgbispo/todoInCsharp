@@ -1,6 +1,7 @@
 using src;
+using database;
 
-namespace Main
+namespace controllers
 {
   class Controller
   {

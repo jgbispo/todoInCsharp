@@ -1,6 +1,6 @@
 namespace src
 {
-  class Item
+  public class Item
   {
     // properties
     private string? name;

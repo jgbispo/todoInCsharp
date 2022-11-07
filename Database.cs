@@ -1,10 +1,10 @@
 using src;
-
-namespace Main
+namespace database
 {
-  class Database
+  public class Database
   {
     private List<ToDo> toDoList = new List<ToDo>();
+
     public void AddToDo(ToDo toDo)
     {
       toDoList.Add(toDo);
