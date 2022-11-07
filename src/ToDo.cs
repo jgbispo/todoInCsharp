@@ -16,9 +16,8 @@ namespace src
     }
 
     // Methods
-    public void AddItem(string name, string description)
+     public void AddItem(Item item)
     {
-      Item item = new Item(name, description);
       toDo.Add(item);
     }
 
@@ -44,8 +43,18 @@ namespace src
       }
     }
 
+    public void ShowToDo()
+    {
+      Table table = new Table(toDo.Count);
+      for (int i = 0; i < toDo.Count; i++)
+      {
+        table.AddItem(toDo, i);
+      }
+      table.ShowTable();
+    }
+
     // Getters and Setters
-    public List<Item> ToDoList
+    public List<Item> Items
     {
       get { return this.toDo; }
     }

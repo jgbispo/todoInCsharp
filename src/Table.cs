@@ -11,9 +11,9 @@ namespace src
       table = new string[rows, 3];
     }
     // Methods
-    public void ShowTable(Item item)
+    public void ShowTable()
     {
-      Console.WriteLine("Name\tDescription\tIs Complete");
+      Console.WriteLine("Name\tDescription\tDone");
       for (int i = 0; i < table.GetLength(0); i++)
       {
         for (int j = 0; j < table.GetLength(1); j++)
@@ -28,7 +28,8 @@ namespace src
     {
       table[row, 0] = toDo[row].Name! + "\t";
       table[row, 1] = toDo[row].Description! + "\t";
-      table[row, 2] = toDo[row].IsComplete.ToString();
+      table[row, 2] = toDo[row].IsComplete ? "Yes" : "No" + "\t";
+
     }
   }
 }
