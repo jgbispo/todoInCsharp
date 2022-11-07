@@ -1,4 +1,4 @@
-namespace ToDo
+namespace ToDoSpace
 {
   class ToDo
   {
@@ -25,10 +25,20 @@ namespace ToDo
     {
       items.Remove(item);
     }
-    
+
     public void CompleteItem(Item item)
     {
       item.IsComplete = true;
+    }
+
+    public bool ExistItem(string name)
+    {
+      return items.Exists(x => x.Name == name);
+    }
+
+    public List<Item> GetItems()
+    {
+      return items;
     }
 
     // Getters and Setters

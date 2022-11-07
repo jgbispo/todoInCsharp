@@ -1,12 +1,11 @@
 using System;
 
-namespace ToDo
+namespace ToDoSpace
 {
   class Controller
   {
     // Properties
     private List<ToDo> toDos;
-
     // Constructor
     public Controller()
     {
@@ -29,17 +28,19 @@ namespace ToDo
       toDo.CompleteItem(item);
     }
 
-    public ToDo? GetToDo(string name)
+    public List<ToDo> GetToDos()
     {
-      foreach (ToDo toDo in toDos)
-      {
-        if (toDo.Name == name)
-        {
-          return toDo;
-        }
-      }
-      return null;
+      return toDos;
     }
 
+    public List<ToDo> GetToDo(string name)
+    {
+      return toDos.FindAll(x => x.Name == name);
+    }
+
+    public bool ExistToDo(string name)
+    {
+      return toDos.Exists(x => x.Name == name);
+    }
   }
 }
