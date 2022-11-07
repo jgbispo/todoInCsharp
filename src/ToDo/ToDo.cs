@@ -1,6 +1,6 @@
 namespace ToDo
 {
-  class ToDoList
+  class ToDo
   {
     // Properties
     private string? name;
@@ -8,7 +8,7 @@ namespace ToDo
     private List<Item> items;
 
     // Constructor
-    public ToDoList(string name, string description)
+    public ToDo(string name, string description)
     {
       this.name = name;
       this.description = description;
@@ -30,6 +30,10 @@ namespace ToDo
     {
       item.IsComplete = true;
     }
+
+    // Getters and Setters
+    public string? Name { get; set; }
+    public string? Description { get; set; }
 
   }
 }
