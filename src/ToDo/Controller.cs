@@ -29,7 +29,7 @@ namespace ToDo
       toDo.CompleteItem(item);
     }
 
-    public ToDo GetToDo(string name)
+    public ToDo? GetToDo(string name)
     {
       foreach (ToDo toDo in toDos)
       {
